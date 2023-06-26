@@ -30,7 +30,8 @@ let Note = mongoose.model('note', notesSchema);
 
 let categoriesSchema = new mongoose.Schema({
     title: String,
-    value: Number
+    value: Number,
+    stats: Number
 });
 let Category = mongoose.model('category', categoriesSchema);
 

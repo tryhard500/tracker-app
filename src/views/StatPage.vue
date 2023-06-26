@@ -34,6 +34,7 @@ export default {
         <h3 class="mb-5">Сводка</h3>
         <div class="categories-container my-5">
             <label v-for="(item, index) in categories" class="category">
+                <div class="stat">{{ this.stats[index].stats }}</div>
                 <div class="category-info">
                     <img :src="'src/assets/' + item.value + '.svg'">
                     {{ item.title }}
@@ -47,6 +48,12 @@ export default {
 <style>
 .create-page h3 {
     text-align: center;
+}
+
+.create-page .stat {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
 }
 
 .create-page .category {
